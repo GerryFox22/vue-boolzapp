@@ -2,11 +2,13 @@
 .container-1-prova {
     background-color: blue;
     height: 100vh;
+    padding: 0;
 }
 
 .container-2-prova {
     background-color: green;
     height: 100vh;
+    padding: 0;
 }
 
 .avatar-icons {
@@ -27,6 +29,8 @@
     color: gray;
 }
 
+
+/* Sezione Notifiche */
 .notifiche {
     line-height: 15px;
     background-color: lightblue;
@@ -46,11 +50,77 @@
     color: lightblue;
 }
 
-.notifiche-testo{
+.notifiche-testo,
+.nome-chat{
     font-size: 0.75rem;
 }
 
 .attiva-notifiche {
     font-size: 0.65rem;
     color: gray;
+}
+
+
+/* Sezione cerca chat */
+.cerca-chat {
+    background-color: lightgray;
+}
+
+.form-control,
+.cerca-chat-icona{
+    color: lightgray;
+    font-size: 0.7rem;
+}
+
+#search-addon {
+    justify-content: center;
+    width: 15%;
+    background-color: white;
+}
+
+
+
+/* Sezione Chats */
+.chat-info {
+    line-height: 13px;
+}
+
+.chat-singola{
+    background-color: white;
+}
+
+/* Sezione colonna 2 header */
+
+.left-border {
+    border-left: 1px solid #c0bebe;
+}
+
+/* Sezione colonna 2 main */
+
+.colonna-2-main {
+    background-image: url("../img/mine.jpg");
+    height: 500px;
+}
+
+
+/* Sezione colonna 2 footer */
+
+.colonna-2-footer {
+    background-color: lightgray;
+}
+
+.audio-container,
+.emoticon-container{
+    width: 10%;
+}
+
+.container-messaggio{
+    width: 80%;
+}
+
+.container-messaggio input {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
 }

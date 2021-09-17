@@ -90,11 +90,18 @@ var app = new Vue({
                 ],
             },
         ],
+
+        segnaElemento : 0,
+        
      
     },  
 
     methods: {
 
+        ritornaAvatar :function(contact){
+            return "img/avatar"+this.avatar+".jpg"
+        }
+        
 
     },
 

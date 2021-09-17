@@ -25,47 +25,126 @@
         <div class="row">
 
             <div class="col-4 container-1-prova">
+                <div class="colonna-1-header">
+                    <div class="nome-utente d-flex justify-content-between">
 
-                <div class="nome-utente d-flex justify-content-between">
-
-                    <div class="info-utente d-flex align-items-center p-2">
-                        <img class="avatar-icons" src="img/avatar_io.jpg" alt="avatar utente">
-                        <p class="nome p-1 fw-bold">Nome Utente </p>
-                    </div>
-
-                    <div class="nome-utente-icons d-flex align-items-center p-2">
-                        <i class="fas fa-circle-notch header-icons"></i>
-                        <i class="fas fa-comment-alt header-icons"></i>
-                        <i class="fas fa-ellipsis-v header-icons"></i>
-                    </div>
-
-                </div>
-
-                <div class="notifiche d-flex align-items-center p-2">
-
-                    <div class="info-utente d-flex align-items-center p-2">
-
-                        <div class="icona-notifiche-container d-flex align-items-center justify-content-center">
-                            <i class="icona-notifica fas fa-bell-slash"></i>
+                        <div class="info-utente d-flex align-items-center p-2">
+                            <img class="avatar-icons" src="img/avatar_io.jpg" alt="avatar utente">
+                            <p class="nome p-1 fw-bold">Nome Utente </p>
                         </div>
+
+                        <div class="nome-utente-icons d-flex align-items-center p-2">
+                            <i class="fas fa-circle-notch header-icons"></i>
+                            <i class="fas fa-comment-alt header-icons"></i>
+                            <i class="fas fa-ellipsis-v header-icons"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="notifiche d-flex align-items-center p-2">
+
+                        <div class="info-utente d-flex align-items-center p-2">
+
+                            <div class="icona-notifiche-container d-flex align-items-center justify-content-center">
+                                <i class="icona-notifica fas fa-bell-slash"></i>
+                            </div>
+                                
+
+                            <div class="notifiche-desktop">
+                                <p class="nome notifiche-testo ps-1 fw-bold">Ricevi notifiche di nuovi messaggi </p>
+                                <a class="attiva-notifiche ps-1">Attiva notifiche desktop</a>
+                            </div>
                             
-
-                        <div class="notifiche-desktop">
-                            <p class="nome notifiche-testo ps-1 fw-bold">Ricevi notifiche di nuovi messaggi </p>
-                            <a class="attiva-notifiche ps-1">Attiva notifiche desktop</a>
                         </div>
+
+                    </div>
+
+                    <div class="cerca-chat p-1">
+
+                        <div class="input-group rounded">
+
+                            <button class="input-group-text border-0" id="search-addon">
+                                <i class="cerca-chat-icona fas fa-search"></i>
+                            </button>
+                            <input type="search" class="form-control rounded" placeholder="Cerca o inizia una nuova chat" aria-label="Search"
+                            aria-describedby="search-addon" />
                         
+                        </div>
+
+                    </div>
+                </div>
+                    
+                <div class="colonna-1-main">
+
+                    <div class="chats">
+
+                        <div v-for="(contact, index) in contacts" class="chat-singola d-flex justify-content-between">
+                          
+                            <div class="chat-unica info-utente d-flex  p-2">
+                                <img class="avatar-icons" src="img/avatar_io.jpg" alt="avatar utente">
+
+                                <div class="chat-info ps-2">
+                                    <p class="nome nome-chat ps-1 fw-bold">{{contact.name}} </p>
+                                    <span class="attiva-notifiche ps-1">{{contact.messages[contact.messages.length - 1].text}}...</span>
+                                </div>
+                                    
+                            </div>
+        
+                            <div class="data-ultimo-messaggio">
+                                <span class="attiva-notifiche pe-3">{{contact.messages[contact.messages.length - 1].date}}</span>
+                            </div>
+        
+                        </div>
+
                     </div>
 
                 </div>
-
-                <div class="cerca-chat"></div>
-
-                <div class="chats"></div>
 
             </div>
 
             <div class="col-8 container-2-prova">
+
+                <div class="colonna-2-header left-border">
+                    
+                    <div class="nome-utente d-flex justify-content-between">
+
+                        <div class="info-utente d-flex align-items-center p-2">
+                            <img class="avatar-icons" src="img/avatar_io.jpg" alt="avatar utente">
+                            <div class="chat-info ps-2">
+                                <p class="nome nome-chat ps-1 fw-bold">Nome</p>
+                                <span class="attiva-notifiche ps-1">Ultimo accesso oggi alle </span>
+                            </div>
+                        </div>
+
+                        <div class="nome-utente-icons d-flex align-items-center p-2">
+                            <i class="fas fa-search header-icons"></i>
+                            <i class="fas fa-paperclip header-icons"></i>
+                            <i class="fas fa-ellipsis-v header-icons"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="colonna-2-main">
+
+                </div>
+
+                <div class="colonna-2-footer d-flex pb-2 pt-2">
+
+                    <div class="emoticon-container d-flex justify-content-center align-items-center">
+                        <i class="far fa-smile"></i>
+                    </div>
+                        
+                    <div class="container-messaggio">
+                        <input type="text" placeholder="Scrivi un messaggio">
+                    </div>
+                        
+                    <div class="audio-container d-flex justify-content-center align-items-center">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                        
+                </div>
 
             </div>
 
