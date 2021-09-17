@@ -8,3 +8,49 @@
     background-color: green;
     height: 100vh;
 }
+
+.avatar-icons {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.nome-utente{
+    background-color: lightgray;
+}
+
+.nome {
+    margin: 0;
+}
+
+.header-icons {
+    padding: 10px;
+    color: gray;
+}
+
+.notifiche {
+    line-height: 15px;
+    background-color: lightblue;
+}
+
+.icona-notifiche-container {
+ 
+    background-color: white;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+   
+}
+
+.icona-notifica{
+    font-size: 1.2rem;
+    color: lightblue;
+}
+
+.notifiche-testo{
+    font-size: 0.75rem;
+}
+
+.attiva-notifiche {
+    font-size: 0.65rem;
+    color: gray;
+}
