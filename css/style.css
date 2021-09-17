@@ -1,12 +1,14 @@
+body {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
 
 .container-1-prova {
-    background-color: blue;
     height: 100vh;
     padding: 0;
 }
 
 .container-2-prova {
-    background-color: green;
     height: 100vh;
     padding: 0;
 }
@@ -81,12 +83,22 @@
 
 
 /* Sezione Chats */
+
+
+.colonna-1-main {
+    background-color: white;
+}
+
 .chat-info {
     line-height: 13px;
 }
 
 .chat-singola{
-    background-color: white;
+    border-top: 1px solid #dcdcdc;
+}
+
+.active{
+    background-color: lightgray;;
 }
 
 /* Sezione colonna 2 header */

@@ -98,10 +98,13 @@ var app = new Vue({
 
     methods: {
 
-        ritornaAvatar :function(contact){
-            return "img/avatar"+this.avatar+".jpg"
-        }
+        ritornaAvatar :function(contact, index){
+            return "img/avatar"+contact.avatar+".jpg"
+        },
         
+        contattoSelezionato : function(index){
+            this.segnaElemento = index;
+        }
 
     },
 

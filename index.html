@@ -24,7 +24,7 @@
 
         <div class="row">
 
-            <div class="col-4 container-1-prova">
+            <div class="col-4 container-1-prova d-flex flex-column">
                 <div class="colonna-1-header">
                     <div class="nome-utente d-flex justify-content-between">
 
@@ -74,14 +74,16 @@
                     </div>
                 </div>
                     
-                <div class="colonna-1-main">
+                <div class="colonna-1-main flex-grow-1">
 
                     <div class="chats">
 
-                        <div v-for="(contact, index) in contacts" class="chat-singola d-flex justify-content-between">
+                        <div v-for="(contact, index) in contacts" @click="contattoSelezionato(index)" 
+                        class="chat-singola d-flex justify-content-between"
+                        :class="{'active' : index == segnaElemento }">
                           
                             <div class="chat-unica info-utente d-flex  p-2">
-                                <img class="avatar-icons" src="img/avatar_io.jpg" alt="avatar utente">
+                                <img class="avatar-icons" :src="ritornaAvatar(contact)" alt="avatar utente">
 
                                 <div class="chat-info ps-2">
                                     <p class="nome nome-chat ps-1 fw-bold">{{contact.name}} </p>
@@ -102,17 +104,17 @@
 
             </div>
 
-            <div class="col-8 container-2-prova">
+            <div class="col-8 container-2-prova d-flex flex-column">
 
                 <div class="colonna-2-header left-border">
                     
                     <div class="nome-utente d-flex justify-content-between">
 
                         <div class="info-utente d-flex align-items-center p-2">
-                            <img class="avatar-icons" src="img/avatar_io.jpg" alt="avatar utente">
+                            <img class="avatar-icons" :src="ritornaAvatar(contacts[segnaElemento])" alt="avatar utente">
                             <div class="chat-info ps-2">
-                                <p class="nome nome-chat ps-1 fw-bold">Nome</p>
-                                <span class="attiva-notifiche ps-1">Ultimo accesso oggi alle </span>
+                                <p class="nome nome-chat ps-1 fw-bold">{{contacts[segnaElemento].name}}</p>
+                                <span class="attiva-notifiche ps-1">Ultimo accesso oggi alle {{contacts[segnaElemento].messages[contacts[segnaElemento].messages.length - 1].date}} </span>
                             </div>
                         </div>
 
@@ -126,7 +128,7 @@
 
                 </div>
 
-                <div class="colonna-2-main">
+                <div class="colonna-2-main flex-grow-1">
 
                 </div>
 
