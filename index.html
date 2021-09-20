@@ -66,7 +66,9 @@
                             <button class="input-group-text border-0" id="search-addon">
                                 <i class="cerca-chat-icona fas fa-search"></i>
                             </button>
-                            <input type="search" class="form-control rounded" placeholder="Cerca o inizia una nuova chat" aria-label="Search"
+                            <input type="search" class="form-control rounded" 
+                            v-model="ricercaChat"
+                            placeholder="Cerca o inizia una nuova chat" aria-label="Search"
                             aria-describedby="search-addon" />
                         
                         </div>
@@ -78,7 +80,9 @@
 
                     <div class="chats">
 
-                        <div v-for="(contact, index) in contacts" @click="contattoSelezionato(index)" 
+                        <div v-for="(contact, index) in contacts" 
+                        v-if="contact.name.toLowerCase().includes(ricercaChat)"
+                        @click="contattoSelezionato(index)" 
                         class="chat-singola d-flex justify-content-between"
                         :class="{'active' : index == segnaElemento }">
                           

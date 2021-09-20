@@ -95,6 +95,8 @@ var app = new Vue({
         
         messaggioInserito :"",
 
+        ricercaChat : "",
+
      
     },  
 
@@ -166,7 +168,7 @@ var app = new Vue({
 // Click sul contatto mostra la conversazione del contatto cliccato
 
 
-// Il Milestone 3 include esclusivamente:
+// Il Milestone 3 include esclusivamente: OK!
 
 // Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” 
 // il testo viene aggiunto al thread sopra, come messaggio verde OK!
