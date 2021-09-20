@@ -81,7 +81,7 @@
                     <div class="chats">
 
                         <div v-for="(contact, index) in contacts" 
-                        v-if="contact.name.toLowerCase().includes(ricercaChat)"
+                        v-if="contact.name.toLowerCase().includes(ricercaChat.toLowerCase())"
                         @click="contattoSelezionato(index)" 
                         class="chat-singola d-flex justify-content-between"
                         :class="{'active' : index == segnaElemento }">
