@@ -93,6 +93,8 @@ var app = new Vue({
 
         segnaElemento : 0,
         
+        messaggioInserito :"",
+
      
     },  
 
@@ -106,7 +108,44 @@ var app = new Vue({
             this.segnaElemento = index;
         },
 
-    
+        aggiungiMessaggio : function(container){
+            
+            var today = new Date();
+            var dd = String(today.getDate());
+            var mm = String(today.getMonth() + 1); 
+            var yyyy = today.getFullYear();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+            today = dd + '/' + mm + '/' + yyyy;
+
+            let nuovoMessaggio = {
+                date : today +" "+ time,
+                text : "",
+                status : "sent",
+            };
+
+            let messaggioRisposta = {
+                date : today +" "+ time,
+                text : "ok",
+                status : "received",
+            };
+
+            if((this.messaggioInserito.trim().length > 0)){
+                
+                nuovoMessaggio.text = this.messaggioInserito,
+                this.messaggioInserito= "",
+
+                container.push(nuovoMessaggio)
+                
+                setTimeout(function(){
+                    container.push(messaggioRisposta)
+                },1000)
+            }
+
+
+        },
+
+
     },
 
   });
@@ -130,9 +169,10 @@ var app = new Vue({
 // Il Milestone 3 include esclusivamente:
 
 // Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” 
-// il testo viene aggiunto al thread sopra, come messaggio verde
+// il testo viene aggiunto al thread sopra, come messaggio verde OK!
+
 // Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come 
-// risposta, che apparirà dopo 1 secondo.
+// risposta, che apparirà dopo 1 secondo. OK!
 
 
 // Il Milestone 4 include esclusivamente:

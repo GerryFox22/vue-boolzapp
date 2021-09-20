@@ -110,6 +110,7 @@ body {
 /* Sezione colonna 2 main */
 
 .colonna-2-main {
+    overflow: auto;
     background-image: url("../img/mine.jpg");
     height: 500px;
 }

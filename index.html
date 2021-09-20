@@ -145,7 +145,7 @@
                     </div>
                         
                     <div class="container-messaggio">
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input v-model="messaggioInserito" @keyup.enter="aggiungiMessaggio(contacts[segnaElemento].messages)" type="text" placeholder="Scrivi un messaggio">
                     </div>
                         
                     <div class="audio-container d-flex justify-content-center align-items-center">
