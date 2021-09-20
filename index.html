@@ -127,9 +127,15 @@
                     </div>
 
                 </div>
-
-                <div class="colonna-2-main flex-grow-1">
-
+                 <!-- Messaggi -->
+                <div class="colonna-2-main d-flex flex-column flex-grow-1 p-5">
+                    <div v-for="message in contacts[segnaElemento].messages" :class="{'sent-message' : message.status == 'sent' }"
+                     class="messaggio p-2 m-2">
+                        <p class="ps-2">{{message.text}}</p>
+                        <span class="d-flex justify-content-end pe-2 attiva-notifiche">
+                            {{message.date}}
+                        </span>
+                    </div>
                 </div>
 
                 <div class="colonna-2-footer d-flex pb-2 pt-2">
